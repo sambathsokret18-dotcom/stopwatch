@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ចូលគណនី (Login) - កម្មវិធីចាប់នាទី</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="TestStopwatch.CSS">
+</head>
+<body>
+
+    <!-- ទម្រង់ Login -->
+    <div class="login-card" id="login-section">
+        <h2>ចូលគណនី</h2>
+        <div class="input-group">
+            <label for="username">ID Card</label>
+            <input type="text" id="username" placeholder="បញ្ចូល ID របស់អ្នក">
+        </div>
+        <div class="input-group">
+            <label for="password">លេខសម្ងាត់ (Password)</label>
+            <input type="password" id="password" placeholder="បញ្ចូល Password">
+        </div>
+        <button class="login-btn" id="loginBtn">ចូល (Login)</button>
+        <div id="error-msg"></div>
+
+        <!-- ផ្នែកបង្ហាញពេលកំពុង ലോដ (លាក់ទុកមុន) -->
+        <div id="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+            <p>កំពុងផ្ទៀងផ្ទាត់...</p>
+        </div>
+    </div>
+
+    <!-- ទំព័រកម្មវិធីបន្ទាប់ពី Login ចូល -->
+    <div class="login-card" id="app-section" style="display: none;">
+        <h2>សូមស្វាគមន៍!</h2>
+        <p>អ្នកបានចូលគណនីដោយជោគជ័យ។</p>
+        <p style="color: #666; font-size: 0.9rem;">(កន្លែងដាក់មុខងារ Upload Excel និង Stopwatch នឹងត្រូវដាក់នៅទីនេះ)</p>
+        <button class="login-btn logout-btn" id="logoutBtn">ចាកចេញ (Logout)</button>
+    </div>
+
+    <script src="TestStopwatch.JS"></script>
+</body>
+</html>

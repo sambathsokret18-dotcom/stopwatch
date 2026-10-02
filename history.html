@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Excel - Stopwatch Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <!-- SheetJS Library សម្រាប់ Download Excel វិញ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+
+     <div class="app-layout">
+        <!-- ម៉ឺនុយខាងឆ្វេង (Sidebar Navigation) -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>⏱️ Stopwatch Pro</h2>
+            </div>
+            
+            <div class="menu-category">General Menu (MENU)</div>
+           <ul class="sidebar-menu">
+                <li class="active"><a href="home.html">🏠 <span>Home</span></a></li>
+                <li><a href="stopwatch.html">⌚ <span>Stopwatch</span></a></li>
+                <li><a href="upload.html">📁 Upload File</a></li>
+                <li><a href="#">🔄 <span>Clone Data</span></a></li>
+                <li><a href="#">✏️ <span>Edit Data</span></a></li>
+                <li><a href="#">📊 <span>Graph Data</span></a></li>
+                <li><a href="#">🟣 <span>MOC</span></a></li>
+                <li><a href="history.html">⏳ <span>History Excel</span></a></li>
+            </ul>
+
+            <div class="menu-category">SETTINGS</div>
+            <ul class="sidebar-menu">
+                <li><a href="#">⚙️️ <span>Modify account</span></a></li>
+                <li>
+    <a href="#" id="logoutBtn" style="color: #ff5252;">
+        <i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span>
+    </a>
+</li>
+            </ul>
+        </aside>
+
+        <!-- មាតិកាខាងស្តាំសម្រាប់បង្ហាញប្រវត្តិ History -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Upload File History</h1>
+                <p>បញ្ជីប្រវត្តិនៃការ Upload ឯកសារ Excel ទាំងអស់ចូលក្នុងប្រព័ន្ធ</p>
+            </header>
+
+            <div class="admin-section">
+                <h3>📋 Uploaded file history</h3>
+                <div class="table-responsive">
+                    <table class="admin-table" style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+                        <thead>
+                            <tr style="border-bottom: 1px solid #2a2a2a; text-align: left; color: #a0aec0;">
+                                <th style="padding: 12px;">N°</th>
+                                <th style="padding: 12px;">Filename</th>
+                                <th style="padding: 12px;">You Upload</th>
+                                <th style="padding: 12px;">Date & Time</th>
+                                <th style="padding: 12px;">Activities</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminTableBody">
+                            <tr>
+                                <td colspan="5" style="text-align: center; padding: 20px; color: #777;">មិនទាន់មានប្រវត្តិការ Upload ទេ។</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Loading Spinner Overlay -->
+    <div id="pageLoader" class="page-loader">
+        <div class="spinner"></div>
+        <p>កំពុងផ្ទុកទិន្នន័យ, សូមរង់ចាំបន្តិច...</p>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script>
+        // ហៅមុខងារបង្ហាញតារាងប្រវត្តិភ្លាមៗពេលបើកទំព័រ History
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof renderAdminHistoryTable === 'function') {
+                renderAdminHistoryTable();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File History - Stopwatch Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN សម្រាប់ប្រើប្រាស់ Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <div class="app-layout">
+        
+        <!-- ម៉ឺនុយខាងឆ្វេង (Sidebar Navigation) -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>⏱️ Stopwatch Pro</h2>
+            </div>
+            
+            <div class="menu-category">General Menu (MENU)</div>
+            <ul class="sidebar-menu">
+                <li><a href="home.html">🏠 Home</a></li>
+                <li><a href="stopwatch.html">⌚ Stopwatch</a></li>
+                <li><a href="upload.html">📁 Upload File</a></li>
+                <li><a href="#">🔄 Clone Data</a></li>
+                <li><a href="#">✏️ Edit Data</a></li>
+                <li><a href="#">📊 Graph Data</a></li>
+                <li><a href="#">🟣 MOC</a></li>
+                <li><a href="history.html">⏳ History Excel</a></li>
+            </ul>
+
+            <div class="menu-category">SETTINGS</div>
+            <ul class="sidebar-menu">
+                <li><a href="#">⚙️ Modify account</a></li>
+                <li>
+                    <a href="#" id="logoutBtn" style="color: #ff5252;">
+                        <i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span>
+                    </a>
+            </li>
+            </ul>
+        </aside>
+
+        <!-- មាតិកាប្រវត្តិ Upload ខាងស្តាំ -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Upload File History</h1>
+                <p>Here is the list of all Excel files uploaded to the system.</p>
+            </header>
+
+            <!-- តារាងប្រវត្តិឯកសារ -->
+            <div class="admin-section">
+                <h3>📋 Uploaded file history</h3>
+                <div class="table-responsive">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>etc.</th>
+                                <th>Filename</th>
+                                <th>You Upload</th>
+                                <th>Date & Time</th>
+                                <th>Activities</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyTableBody">
+                            <tr>
+                                <td>1</td>
+                                <td>No file yet.</td>
+                                <td>Admin</td>
+                                <td>-</td>
+                                <td>
+                                    <button class="action-btn btn-download" onclick="downloadFile()">Download</button>
+                                    <button class="action-btn btn-delete" onclick="deleteFile()">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <!-- Loading Spinner Overlay -->
+<div id="pageLoader" class="page-loader">
+    <div class="spinner"></div>
+    <p>កំពុងផ្ទុកទិន្នន័យ, សូមរង់ចាំបន្តិច...</p>
+</div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

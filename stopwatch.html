@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ប្រព័ន្ធចាប់នាទីដេរ (Sewing Stopwatch)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stopwatch.css">
+</head>
+<body>
+
+    <div class="stopwatch-container">
+        <!-- Header -->
+        <header class="sw-header">
+            <div class="file-title-box">
+                <h2>⏱️ កម្មវិធីចាប់នាទីដំណើរការដេរ</h2>
+                <p id="currentFileNameDisplay">ឯកសារ៖ មិនទាន់មាន</p>
+            </div>
+            <button class="back-btn" id="backToDashboardBtn">⬅️ ត្រឡប់ក្រោយ (Dashboard)</button>
+        </header>
+
+        <!-- ផ្នែកបង្ហាញតារាងទិន្នន័យ Excel សម្រាប់ចាប់នាទី -->
+        <div class="sw-card">
+            <h3>📋 តារាងដំណើរការដេរ (Operations List)</h3>
+            <div class="table-responsive">
+                <table class="sw-table" id="excelDataTable">
+                    <!-- ទិន្នន័យ Excel នឹងត្រូវទាញមកបង្ហាញទីនេះដោយស្វ័យប្រវត្តិ -->
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="stopwatch.js"></script>
+</body>
+</html>

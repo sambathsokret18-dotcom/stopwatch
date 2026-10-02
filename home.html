@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Stopwatch Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <div class="app-layout">
+        <!-- ម៉ឺនុយខាងឆ្វេង (Sidebar Navigation) -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>⏱️ Stopwatch Pro</h2>
+            </div>
+            
+            <div class="menu-category">General Menu (MENU)</div>
+            <ul class="sidebar-menu">
+                <li class="active"><a href="home.html">🏠 <span>Home</span></a></li>
+                <li><a href="stopwatch.html">⌚ <span>Stopwatch</span></a></li>
+                <li><a href="upload.html">📁 <span>Upload File</span></a></li>
+                <li><a href="#">🔄 <span>Clone Data</span></a></li>
+                <li><a href="#">✏️ <span>Edit Data</span></a></li>
+                <li><a href="#">📊 <span>Graph Data</span></a></li>
+                <li><a href="#">🟣 <span>MOC</span></a></li>
+                <li><a href="history.html">⏳ <span>History Excel</span></a></li>
+            </ul>
+
+            <div class="menu-category">SETTINGS</div>
+            <ul class="sidebar-menu">
+                <li><a href="#">⚙️ <span>Modify account</span></a></li>
+                <li>
+    <a href="#" id="logoutBtn" style="color: #ff5252;">
+        <i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span>
+    </a>
+</li>
+            </ul>
+        </aside>
+
+        <!-- មាតិកាខាងស្តាំសម្រាប់ទំព័រ Home (ផ្ទាំងទទេ ឬស្វាគមន៍) -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>ទំព័រដើម (Home Dashboard)</h1>
+                <p>សូមស្វាគមន៍មកកាន់ប្រព័ន្ធ Stopwatch Pro</p>
+            </header>
+
+            <div class="admin-section">
+                <div class="empty-state-box" style="text-align: center; padding: 50px; color: #718096;">
+                    <h3>🏠 គ្មានទិន្នន័យបង្ហាញនៅលើផ្ទាំង Home ទេ។</h3>
+                    <p>សូមជ្រើសរើសម៉ឺនុយ Upload File នៅខាងឆ្វេងដើម្បីចាប់ផ្តើមដាក់បញ្ចូលទិន្នន័យ Excel ។</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    
+</body>
+</html>

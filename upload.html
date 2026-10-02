@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File - Stopwatch Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- SheetJS Library សម្រាប់អាន Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <div class="app-layout">
+        <!-- ម៉ឺនុយខាងឆ្វេង (Sidebar Navigation) -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>⏱️ Stopwatch Pro</h2>
+            </div>
+            
+            <div class="menu-category">General Menu (MENU)</div>
+            <ul class="sidebar-menu">
+                <li class="active"><a href="home.html">🏠 <span>Home</span></a></li>
+                <li><a href="stopwatch.html">⌚ <span>Stopwatch</span></a></li>
+                <li><a href="upload.html">📁 Upload File</a></li>
+                <li><a href="#">🔄 <span>Clone Data</span></a></li>
+                <li><a href="#">✏️ <span>Edit Data</span></a></li>
+                <li><a href="#">📊 <span>Graph Data</span></a></li>
+                <li><a href="#">🟣 <span>MOC</span></a></li>
+                <li><a href="history.html">⏳ <span>History Excel</span></a></li>
+            </ul>
+
+            <div class="menu-category">SETTINGS</div>
+            <ul class="sidebar-menu">
+                <li><a href="#">⚙️️ <span>Modify account</span></a></li>
+                <li>
+    <a href="#" id="logoutBtn" style="color: #ff5252;">
+        <i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span>
+    </a>
+</li>
+            </ul>
+        </aside>
+
+        <!-- មាតិកាខាងស្តាំសម្រាប់ Upload File -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Upload Excel File</h1>
+                <p>បញ្ចូលឯកសារទិន្នន័យរបស់អ្នកទៅក្នុងប្រព័ន្ធ</p>
+            </header>
+
+            <div class="admin-section">
+                <div class="dashboard-card" style="background: #0f0f0f; padding: 40px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: center;">
+                    <h3>ជ្រើសរើសឯកសារ Excel (.xlsx, .xls)</h3>
+                    <p class="instruction-text" style="color: #b6b6b6; margin-bottom: 25px;">ទម្លាក់ ឬចុចទីនេះដើម្បីជ្រើសរើសឯកសារពីកុំព្យូទ័ររបស់អ្នក</p>
+                    
+                    <div class="upload-box">
+                        <label for="excelFile" class="upload-label" style="display: inline-block; padding: 14px 28px; background-color: #28a745; color: white; border-radius: 8px; cursor: pointer; font-weight: 500;">
+                            📁 Browse Excel File
+                        </label>
+                        <input type="file" id="excelFile" accept=".xlsx, .xls, .csv" style="display: none;">
+                        <div id="fileNameDisplay" class="file-name" style="margin-top: 15px; color: #b6b6b6; font-style: italic;">មិនទាន់មានឯកសារត្រូវបានជ្រើសរើស</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
